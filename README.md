@@ -7,4 +7,15 @@ Linux学习整理： http://www.magedu.com/74163.html?linux_wenda_zhihu_jinke_we
 
 React社区精选组件(By Antd):  https://ant.design/docs/react/recommendation-cn
 
+## idea hot key
+ctrl+alt+l:格式化代码
+ctrl  +/-:展开或折叠代码块
+ctrl+shift+r:全局替换/搜索
+f12转到定义
+ctrl+/：注释
+F7：逐行调试
+F8：VS中F5，跳到下一个断点
+Ctrl+H:全局查找文件内容
+Ctrl+G:转到方法全部引用
+
 
