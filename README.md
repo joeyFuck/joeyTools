@@ -37,5 +37,5 @@ http://guide.daocloud.io/dcs/daocloud-9152657.html
 
 ## VS Code Token setting Async, bind with github account(joeyFuck)
 
-3fb4ba6595d2268efc310aab6a59c5f951451658
+9f61ae492bfae4584f加起来默认不让放在这6646e46650e06ce4764918
 
