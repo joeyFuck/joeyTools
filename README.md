@@ -34,3 +34,8 @@ https://www.jianshu.com/p/5b0cd99e0332
 ## Docker
 
 http://guide.daocloud.io/dcs/daocloud-9152657.html
+
+## VS Code Token setting Async, bind with github account(joeyFuck)
+
+3fb4ba6595d2268efc310aab6a59c5f951451658
+
