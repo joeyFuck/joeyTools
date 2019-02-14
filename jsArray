@@ -1,0 +1,3 @@
+arr.splice(rowIndex - 1,rowCount) delete
+
+arr.slice(0) deep copy
