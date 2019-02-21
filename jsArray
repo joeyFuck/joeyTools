@@ -1,3 +1,5 @@
 arr.splice(rowIndex - 1,rowCount) delete
 
 arr.slice(0) deep copy
+
+isNaN() 函数用于检查其参数是否是非数字值。true:非数字
