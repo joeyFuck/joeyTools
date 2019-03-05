@@ -15,7 +15,37 @@ Format(2222,
 Format(4444,
 Format(555,
 
+例子3： 
+9.xrisk.1000+（xrisk.P10.4320-56+DLIST.A1+1.xrisk.P14.43333）*xrisk.P10.4311+exp(xrisk.P10.4311,1,2)
+取出  9.xrisk.1000   xrisk.P10.4320  DLIST.A1 1.xrisk.P14.43333 xrisk.P10.4311  exp(xrisk.P10.4311,1,2)
 
+//匹配函数
+foreach (Match m in Regex.Matches("9.xrisk.1000+（xrisk.P10.4320-56+DLIST.A1+1.xrisk.P14.43333）*xrisk.P10.4311+exp(xrisk.P10.4311,1,2)", @"\w+\([^\(\)]*(((?'Open'\()[^\(\)]*)+((?'-Open'\))[^\(\)]*)+)*(?(Open)(?!))\)"))
+{
+    Console.WriteLine(m.Value);//函数A(1,2,3,4,5,6,7) 函数B(2,3,4,5,6)
+}
+
+//匹配开头 
+foreach (Match m in Regex.Matches("9.xrisk.1000+（xrisk.P10.4320-56+DLIST.A1+1.xrisk.P14.43333）*xrisk.P10.4311+exp(xrisk.P10.4311,1,2)", @"^[a-zA-Z0-9]+((\.)[a-zA-Z0-9]+)+([\+\-\(\)）]){1}")) 
+{
+    Console.WriteLine(m.Value);
+}
+
+//两位
+foreach (Match m in Regex.Matches("9.xrisk.1000+（xrisk.P10.4320-56+DLIST.A1+1.xrisk.P14.43333）*xrisk.P10.4311+exp(xrisk.P10.4311,1,2)", @"([\+\-\(\)（）\*\/]){1}[a-zA-Z0-9]+((\.)[a-zA-Z0-9]+){1}([\+\-\(\)）\*]){1}"))
+{
+    Console.WriteLine(m.Value.Substring(1, m.Value.Length-2));
+}
+//三位
+foreach (Match m in Regex.Matches("9.xrisk.1000+（xrisk.P10.4320-56+DLIST.A1+1.xrisk.P14.43333）*xrisk.P10.4311+exp(xrisk.P10.4311,1,2)", @"([\+\-\(\)（）\*\/]){1}[a-zA-Z0-9]+((\.)[a-zA-Z0-9]+){2}([\+\-\(\)）\*]){1}"))
+{
+    Console.WriteLine(m.Value.Substring(1, m.Value.Length - 2));
+}
+//四位
+foreach (Match m in Regex.Matches("9.xrisk.1000+（xrisk.P10.4320-56+DLIST.A1+1.xrisk.P14.43333）*xrisk.P10.4311+exp(xrisk.P10.4311,1,2)", @"([\+\-\(\)（）\*\/]){1}[a-zA-Z0-9]+((\.)[a-zA-Z0-9]+){3}([\+\-\(\)）\*]){1}"))
+{
+    Console.WriteLine(m.Value.Substring(1, m.Value.Length - 2));
+}
 
 
 
