@@ -17,15 +17,21 @@ ctrl+shift+r:全局替换/搜索
 
 f12转到定义
 
-ctrl+/：注释
+ctrl+/:注释
 
-F7：逐行调试
+F7:逐行调试
 
-F8：VS中F5，跳到下一个断点
+F8:VS中F5，跳到下一个断点
 
 Ctrl+H:全局查找文件内容
 
 Ctrl+G:转到方法全部引用
+
+Ctrl + alt +v:自动生成方法返回值
+
+alt+enter:自动引用package
+
+按idea函数左边工具栏上小绿点，可以切换接口跟实现界面
 
 ## 利用K8S技术栈(+Docker)打造个人私有云
 
