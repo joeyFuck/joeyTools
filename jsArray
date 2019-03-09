@@ -5,3 +5,7 @@ arr.slice(0) deep copy
 isNaN() 函数用于检查其参数是否是非数字值。true:非数字
 
 str.slice(0,str.length-1) 去除最后一个字符串 返回新的字符串对象
+
+//判断数组中是否含有某一元素
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var a = fruits.indexOf("Apple"); // 2
