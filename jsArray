@@ -9,3 +9,13 @@ str.slice(0,str.length-1) 去除最后一个字符串 返回新的字符串对�
 //判断数组中是否含有某一元素
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 var a = fruits.indexOf("Apple"); // 2
+
+//对象数组去重
+dealDistinct:function(arr){
+    var obj = {};
+    return arr.reduce(function(item, next) {
+        obj[next.value] ? '' : obj[next.value] = true && item.push(next);
+        return item;
+    }, []);
+}
+
