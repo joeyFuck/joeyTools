@@ -19,3 +19,26 @@ dealDistinct:function(arr){
     }, []);
 }
 
+空对象判断 {}
+1--
+function fun(){
+    for(var key in Obj){
+        return true;
+    }
+    return false;
+}
+
+2--
+if(JSON.Stringfy(obj) == "{}"){
+    return false;
+}
+
+3--
+if(Object.keys(Obj).length > 0){
+    return true;
+}
+
+
+
+
+
