@@ -11,7 +11,7 @@ React社区精选组件(By Antd):  https://ant.design/docs/react/recommendation-
 
 ctrl+alt+l:格式化代码
 
-ctrl  +/-:展开或折叠代码块
+ctrl+shift  +/-:整页展开或折叠代码块 去掉shift就是单个方法的折叠 
 
 ctrl+shift+r:全局替换/搜索
 
