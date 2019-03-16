@@ -1,16 +1,16 @@
-arr.splice(rowIndex - 1,rowCount) delete
+1. arr.splice(rowIndex - 1,rowCount) delete
 
-arr.slice(0) deep copy
+2. arr.slice(0) deep copy
 
-isNaN() 函数用于检查其参数是否是非数字值。true:非数字
+3. isNaN() 函数用于检查其参数是否是非数字值。true:非数字
 
-str.slice(0,str.length-1) 去除最后一个字符串 返回新的字符串对象
+4. str.slice(0,str.length-1) 去除最后一个字符串 返回新的字符串对象
 
-//判断数组中是否含有某一元素
+5. //判断数组中是否含有某一元素
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 var a = fruits.indexOf("Apple"); // 2
 
-//对象数组去重
+6. //对象数组去重
 dealDistinct:function(arr){
     var obj = {};
     return arr.reduce(function(item, next) {
@@ -19,7 +19,7 @@ dealDistinct:function(arr){
     }, []);
 }
 
-空对象判断 {}
+7. 空对象判断 {}
 1--
 function fun(){
     for(var key in Obj){
@@ -37,6 +37,55 @@ if(JSON.Stringfy(obj) == "{}"){
 if(Object.keys(Obj).length > 0){
     return true;
 }
+
+8. /*按id分组*/
+arrayGroup:function(arr){
+    var map = {},
+    dest = [];
+    for(var i = 0; i < arr.length; i++){
+        var ai = arr[i];
+        if(!map[ai.id]){
+            dest.push({
+                id: ai.id,
+                name: ai.name,
+                data: [ai]
+            });
+            map[ai.id] = ai;
+        }else{
+            for(var j = 0; j < dest.length; j++){
+                var dj = dest[j];
+                if(dj.id == ai.id){
+                    dj.data.push(ai);
+                    break;
+                }
+            }
+        }
+    }
+    return dest;
+},
+[
+    {"id":"1001","name":"值1","value":"111"},
+    {"id":"1001","name":"值1","value":"11111"},
+    {"id":"1002","name":"值2","value":"25462"}
+]
+==>
+[
+    {
+        "id": "1001",
+        "name": "值1",
+        "data": [
+            {"id": "1001", "name": "值1", "value": "111"},
+            { "id": "1001", "name": "值1", "value": "11111"}
+        ]
+    },
+    {
+        "id": "1002",
+        "name": "值2",
+        "data": [
+            { "id": "1002",  "name": "值2", "value": "25462" }, 
+        ]
+    }
+]
 
 
 
