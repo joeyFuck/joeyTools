@@ -1,0 +1,4 @@
+1. cd
+cd /home/software/tomcat8.0/logs/;
+2. cat 文本输出命令
+cat catalina.out
