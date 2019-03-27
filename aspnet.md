@@ -1,4 +1,5 @@
-1. 一般处理程序设置文件直接url下载限制
+### 1. 一般处理程序设置文件直接url下载限制
+```
 <configuration>
     <system.webServer> 
       <handlers>
@@ -6,7 +7,8 @@
       </handlers>
     </system.webServer>
 </configuration>
-
+```
+```
 public class DownloadHandler : IHttpHandler
 {
     public DownloadHandler(){}
@@ -29,3 +31,4 @@ public class DownloadHandler : IHttpHandler
         }
     }
 }
+```
