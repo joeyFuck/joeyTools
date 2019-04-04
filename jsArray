@@ -87,7 +87,32 @@ arrayGroup:function(arr){
     }
 ]
 
+9. 递归查找对应id对象集合
+findTarget(source, targetId, result) { 
+   if (targetId instanceof Array) {
+       for (let id of targetId) {
+         this.findTargetArr(source, id, result)
+       } 
+   } else{
+        this.findTargetArr(source, targetId, result)
+   }
+},
+findTargetArr(source, targetId, result) {
+    if (source && source.length) {
+        for (let item of source) {
+            if (item.id === targetId) {
+                result.push(item);
+            } else if (item.children && item.children.length){
+                this.findTargetArr(item.children, targetId, result);
+            }
+        }
+    }
+}
 
+使用==>
+let result = [];
+this.findTarget(dataSource, idArr, result); 
+console.log(result);
 
 
 
