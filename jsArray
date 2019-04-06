@@ -1,4 +1,7 @@
-1. arr.splice(rowIndex - 1,rowCount) delete
+1. arr.splice(rowIndex - 1,rowCount) delete  
+    
+    findIndex()方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。  
+    arr.splice(arr.findIndex(item => item.id === 8), 1)  
 
 2. arr.slice(0) deep copy
 
