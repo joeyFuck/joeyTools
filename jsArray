@@ -91,22 +91,30 @@ arrayGroup:function(arr){
 ]
 
 9. 递归查找对应id对象集合
-findTarget(source, targetId, result) { 
-   if (targetId instanceof Array) {
-       for (let id of targetId) {
-         this.findTargetArr(source, id, result)
-       } 
-   } else{
-        this.findTargetArr(source, targetId, result)
-   }
-},
-findTargetArr(source, targetId, result) {
+/** 
+ * 递归查找
+ * @param  {} source 数据源
+ * @param  {} targetId 支持单id跟id数组
+ * @param  {} result 返回值
+ * @param  {} propsId Identified key default:id
+ * @param  {} propsChildren  Identified children key default:children
+ */
+export function findTarget(source, targetId, result, propsId="id", propsChildren="children") {  
+    if (targetId instanceof Array) {
+        for (let id of targetId) {
+            findTargetArr(source, id, result, propsId, propsChildren)
+        } 
+    } else{
+        findTargetArr(source, targetId, result, propsId, propsChildren)
+    }
+}
+function findTargetArr(source, targetId, result, propsId, propsChildren) {
     if (source && source.length) {
         for (let item of source) {
-            if (item.id === targetId) {
+            if (item[propsId] === targetId) {
                 result.push(item);
-            } else if (item.children && item.children.length){
-                this.findTargetArr(item.children, targetId, result);
+            } else if (item[propsChildren] && item[propsChildren].length){
+                findTargetArr(item[propsChildren], targetId, result, propsId, propsChildren);
             }
         }
     }
