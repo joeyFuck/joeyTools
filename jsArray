@@ -125,5 +125,23 @@ let result = [];
 this.findTarget(dataSource, idArr, result); 
 console.log(result);
 
+10. map 映射  
+在实际使用的时候，我们可以利用map方法方便获得对象数组中的特定属性值们。例如下面这个例子（之后的兼容demo也是该例子）：
+var users = [
+  {name: "张含韵", "email": "zhang@email.com"},
+  {name: "江一燕",   "email": "jiang@email.com"},
+  {name: "李小璐",  "email": "li@email.com"}
+];
+
+var emails = users.map(function (user) { return user.email; });
+
+console.log(emails.join(", ")); // zhang@email.com, jiang@email.com, li@email.com
+
+11. filter 过滤   
+var newarr = [
+  { num: 1, val: 'ceshi', flag: 'aa' },
+  { num: 2, val: 'ceshi2', flag: 'aa2'  }
+]
+console.log(newarr.filter(item => item.num===2 ))
 
 
