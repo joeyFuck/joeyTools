@@ -7,6 +7,10 @@ Linux学习整理： http://www.magedu.com/74163.html?linux_wenda_zhihu_jinke_we
 
 React社区精选组件(By Antd):  https://ant.design/docs/react/recommendation-cn
 
+## svn ignore patten list
+
+*.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.rej *~ #*# .#* .*.swp .DS_Store .settings target target/* .idea .idea/* *.iml
+
 ## idea hot key
 
 ctrl+alt+l:格式化代码
