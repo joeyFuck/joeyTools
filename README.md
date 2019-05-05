@@ -19,9 +19,17 @@ ctrl+shift  +/-:整页展开或折叠代码块 去掉shift就是单个方法的�
 
 ctrl+shift+r:全局替换/搜索
 
+ctrl+shift+f:全局搜索(包括内容) 常用
+
+double shift(全局搜索，搜索文件名，路由相关) 最常用
+
+ctrl+alt+o(去除无效引用)
+
 f12转到定义
 
 ctrl+/:注释
+
+ctrl+alt+v 方法返回值代码填充
 
     vs
 F7:f11
