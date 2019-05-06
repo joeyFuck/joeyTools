@@ -31,7 +31,10 @@ ctrl+/:注释
 
 ctrl+alt+v 方法返回值代码填充
 
-    vs
+Ctrl+Alt+L 格式化代码
+
+## vs
+
 F7:f11
 
 F8:F10
