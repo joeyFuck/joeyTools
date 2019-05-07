@@ -33,6 +33,8 @@ ctrl+alt+v 方法返回值代码填充
 
 Ctrl+Alt+L 格式化代码
 
+alt+insert 生成getter setter
+
 ## vs
 
 F7:f11
