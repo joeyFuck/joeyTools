@@ -25,7 +25,7 @@ double shift(全局搜索，搜索文件名，路由相关) 最常用
 
 ctrl+alt+o(去除无效引用)
 
-f12转到定义
+ctrl+f12 方法名查找
 
 ctrl+/:注释
 
