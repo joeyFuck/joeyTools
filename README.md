@@ -35,6 +35,12 @@ Ctrl+Alt+L 格式化代码
 
 alt+insert 生成getter setter
 
+//region 折叠
+//endregion
+
+Ctrl+”+/-”，当前方法展开、折叠
+Ctrl+Shift+”+/-”，全部展开、折叠
+
 ## vs
 
 F7:f11
