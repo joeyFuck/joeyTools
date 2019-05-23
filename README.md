@@ -27,6 +27,8 @@ ctrl+alt+o(去除无效引用)
 
 ctrl+f12 方法名查找
 
+f4:相当于VS的f12
+
 ctrl+/:注释
 
 ctrl+alt+v 方法返回值代码填充
