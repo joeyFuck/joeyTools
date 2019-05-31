@@ -32,7 +32,7 @@ function fun(){
 }
 
 2--
-if(JSON.Stringfy(obj) == "{}"){
+if(JSON.stringify(obj) == "{}"){
     return false;
 }
 
