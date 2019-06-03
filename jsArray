@@ -144,4 +144,7 @@ var newarr = [
 ]
 console.log(newarr.filter(item => item.num===2 ))
 
+12. find 
+语法与filter一致，区别在于find返回单个对象而非数组，找到第一个符合条件即返回，未找到符合条件的返回undediend
+
 
