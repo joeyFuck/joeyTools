@@ -25,7 +25,9 @@ double shift(全局搜索，搜索文件名，路由相关) 最常用
 
 ctrl+alt+o(去除无效引用)
 
-ctrl+f12 方法名查找
+ctrl+f12 当前文件内方法名查找
+
+ctrl+n 文件名查找
 
 f4:相当于VS的f12
 
