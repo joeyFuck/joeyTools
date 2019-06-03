@@ -147,4 +147,9 @@ console.log(newarr.filter(item => item.num===2 ))
 12. find 
 语法与filter一致，区别在于find返回单个对象而非数组，找到第一个符合条件即返回，未找到符合条件的返回undediend
 
+13. 
+unshift 在数组第一个元素前插入元素
+shift弹出数组第一个元素，返回被弹出的元素值
+pop函数删除数组末尾元素
+push在数组末尾添加元素，返回添加元素以后的数组长度
 
