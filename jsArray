@@ -137,6 +137,22 @@ var emails = users.map(function (user) { return user.email; });
 
 console.log(emails.join(", ")); // zhang@email.com, jiang@email.com, li@email.com
 
+const users=res.items.map(item => ({
+    url: item.html_url,      
+    img: item.avatar_url,      
+    name: item.login,
+    })
+);
+
+let r = res.map(item => {
+    return {
+        title: item.name,
+        sex: item.sex === 1? '男':item.sex === 0?'女':'保密',
+        age: item.age,
+        avatar: item.img
+    }
+})
+
 11. filter 过滤   
 var newarr = [
   { num: 1, val: 'ceshi', flag: 'aa' },
