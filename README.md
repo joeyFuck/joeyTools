@@ -72,8 +72,9 @@ https://www.jianshu.com/p/5b0cd99e0332
 http://guide.daocloud.io/dcs/daocloud-9152657.html
 
 ## VS Code Token setting Async, bind with github account(joeyFuck)
-
-9f61ae492bfae4584f加起来默认不让放在这6646e46650e06ce4764918
+ 
+`GitHub Token: 9f61ae492bf加起来默认不让放在这ae4584f6646e46650e06ce4764918`
+`GitHub Gist: b9e3f106061加起来默认不让放在这a249d4edafdd34b9ef9d2`
 
 ## 气象预报免费API
 
