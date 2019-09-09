@@ -32,6 +32,7 @@
 ### redis:
 
 1. redis-cli：自带的客户端，进入redis
+1. redis-cli -h 192.168.154.128 -p 6379 # 指定进入哪个实例 默认为localhost:6379
 
 2. $ docker exec -it 882ba4a24120 bash
 3. root@dc416bda091c:/data# redis-cli
