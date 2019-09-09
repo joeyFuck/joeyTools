@@ -1,4 +1,21 @@
 1. cd
 cd /home/software/tomcat8.0/logs/;
+
 2. cat 文本输出命令
 cat catalina.out
+
+3. 新建用户
+adduser phpq //新建phpq用户
+
+4. 为用户分配文件夹权限
+chown ‐R phpq ./abc
+
+5. 更新依赖
+apt-get update (更新依赖)
+
+5. 安装ssh
+sudo apt-get install openssh-server #安装ssh服务器  
+service ssh status # 查看ssh服务启动情况  
+service ssh start # 启动ssh服务  
+
+
