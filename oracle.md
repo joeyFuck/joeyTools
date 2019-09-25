@@ -5,5 +5,10 @@ create tablespace flowable_engine datafile 'E:\app\hangjie.zhu\oradata\orclflowa
 create user xcrsdb_engine_user1 identified by xcrsdb_engine_user1 default tablespace flowable_engine; --在当前实例下建用户
 
 
+导出某个用户下的所有表
+exp "XCRSDB_ENGINE_USER1/credit123@127.0.0.1:1521/orclflowable" file=f:\flowable20190926.dmp  owner=XCRSDB_ENGINE_USER1
+
+导入
+imp "xcrsdb_flowable/credit123@127.0.0.1:1521/orcl" file=f:\localhost20190926.dmp full=y ignore=y
 
 
