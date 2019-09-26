@@ -12,3 +12,7 @@ exp "XCRSDB_ENGINE_USER1/credit123@127.0.0.1:1521/orclflowable" file=f:\flowable
 imp "xcrsdb_flowable/credit123@127.0.0.1:1521/orcl" file=f:\localhost20190926.dmp full=y ignore=y
 
 
+ALTER USER xcrsdb_zhj ACCOUNT UNLOCK;
+commit;
+然后修改密码，不修改密码，仍未解锁
+
