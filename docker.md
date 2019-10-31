@@ -44,7 +44,7 @@
 8. 127.0.0.1:6379> slaveof no one  --退出主从关系
 
 9. 启动redis,进到redis-servcer所在文件夹， ./redis-server   redis.conf
-
+10. 进到redis-cli所在文件夹> ./redis-cli  连接到redis，就可以使用redis-cli提供的命令了
 
 
 
