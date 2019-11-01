@@ -4,6 +4,12 @@
 
 3 create user xcrsdb_engine_user1 identified by xcrsdb_engine_user1 default tablespace flowable_engine; --在当前实例下建用户
 
+删除用户（即删库）
+select username,sid,serial#,t.* from v$session t where username='PF_XCRMS' ;--
+alter system kill session '9,27190' ;
+alter user PF_XCRMS account UNLOCK
+alter session set "_ORACLE_SCRIPT"=true; 
+--drop user PF_XCRMS CASCADE
 
 4 导出导入某个用户下的所有表
 
