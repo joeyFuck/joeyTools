@@ -50,3 +50,5 @@ alter table ACT_EVT_LOG allocate extent; --给当前用户下的表分配空间
 
 --alter ....
 
+7 NVL( string1, replace_Str) 
+
