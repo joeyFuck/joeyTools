@@ -37,8 +37,8 @@
 2. $ docker exec -it 882ba4a24120 bash
 3. root@dc416bda091c:/data# redis-cli
 4. 127.0.0.1:6379> info replication  # 显示redis信息
-5. redis-cli info replication #查看redis的复制授权信息
-6. redis-cli info sentinel   #查看redis的哨兵信息
+5. 127.0.0.1:6379> info replication #查看redis的复制授权信息
+6. 127.0.0.1:26379> info sentinel   #查看redis的哨兵信息 进到的是哨兵的进程 26379
 
 7. 127.0.0.1:6379> slaveof 172.17.0.3 6379 --设置当前库为172.17.0.3 6379的从库 主库会将数据初始化同步到子库上。
 8. 127.0.0.1:6379> slaveof no one  --退出主从关系
