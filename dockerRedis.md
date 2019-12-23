@@ -45,8 +45,10 @@
 
 9. 启动redis,进到redis-servcer所在文件夹， ./redis-server   redis.conf
 10. 进到redis-cli所在文件夹> ./redis-cli  连接到redis，就可以使用redis-cli提供的命令了
-
-
+11. 127.0.0.1:6379> config get requirepass # 查看当前redis有没有设置密码
+12. 127.0.0.1:6379> config set requirepass 123456 # 设置密码
+13. 127.0.0.1:6379> auth 123456 # 有密码了后，主动输入密码
+14. 127.0.0.1:6379> shutdown # 终止实例
 
 
 
