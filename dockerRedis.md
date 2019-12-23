@@ -49,8 +49,21 @@
 12. 127.0.0.1:6379> config set requirepass 123456 # 设置密码
 13. 127.0.0.1:6379> auth 123456 # 有密码了后，主动输入密码
 14. 127.0.0.1:6379> shutdown # 终止实例
+15. linux> ./redis-server ../redis.conf  # 指定配置文件开启redis redis-server一般在src下
+16. linux> ./redis-server ../sentinel.conf --sentinel # 指定配置文件开启哨兵进程
 
-
+```sentinel.conf配置
+#哨兵的端口
+port 26380
+#初次配置时的状态，这个sentinel会自动更新
+sentinel monitor mymaster 127.0.0.1 6379 1
+#redis是否要用守护线程的方式启动
+daemonize yes
+#哨兵监听的主从集群密码
+sentinel auth-pass mymaster 123456
+#保护模式关闭
+protected-mode no
+```
 
 
 
