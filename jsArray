@@ -169,3 +169,5 @@ shift弹出数组第一个元素，返回被弹出的元素值
 pop函数删除数组末尾元素
 push在数组末尾添加元素，返回添加元素以后的数组长度
 
+14. 排序
+list = list.sort((a,b)=>a.BASEDATE > b.BASEDATE ? 1 : -1);  
