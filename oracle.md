@@ -52,3 +52,12 @@ alter table ACT_EVT_LOG allocate extent; --给当前用户下的表分配空间
 
 7 NVL( string1, replace_Str) 
 
+8 表被锁
+
+  SELECT T2.USERNAME, T2.SID, T2.SERIAL#, T2.LOGON_TIME
+    FROM V$LOCKED_OBJECT T1, V$SESSION T2
+   WHERE T1.SESSION_ID = T2.SID
+   ORDER BY T2.LOGON_TIME;
+
+  alter system kill session '99,3783';
+
