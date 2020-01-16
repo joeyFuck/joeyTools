@@ -44,5 +44,6 @@
     desc: code helper for Vue2.  
     setting: null  
     how to use: null
-
+4.    
+"search.followSymlinks":false 解决100%
 
