@@ -13,9 +13,20 @@ chown ‐R phpq ./abc
 5. 更新依赖
 apt-get update (更新依赖)
 
-5. 安装ssh
+6. 安装ssh
 sudo apt-get install openssh-server #安装ssh服务器  
 service ssh status # 查看ssh服务启动情况  
 service ssh start # 启动ssh服务  
 
+7. 查找name(如java)相关的进程信息 
+   ps –ef| grep {name}
 
+8. 通过对应端口进程lsof -i:{端口号}查看进程信息
+   lsof -i:{端口号}
+
+9. 杀进程
+   kill -9 {PID}
+    
+    
+    
+ 
