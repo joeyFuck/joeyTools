@@ -26,7 +26,22 @@ service ssh start # 启动ssh服务
 
 9. 杀进程
    kill -9 {PID}
-    
+
+10. linux定时清理任务
+   https://blog.csdn.net/xigua_0616/article/details/88869780
+
+11. 查看磁盘占用情况
+   df -hl
+   注意文件删除后，若显示磁盘占用还是很高，试着把相关应用进程也停掉，再看磁盘占用情况。
+   
+   
+   
+   
+   
+   
+   
+   
+   
     
     
  
