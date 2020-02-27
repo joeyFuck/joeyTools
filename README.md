@@ -9,7 +9,7 @@ React社区精选组件(By Antd):  https://ant.design/docs/react/recommendation-
 
 ## svn ignore patten list
 
-*.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.rej *~ #*# .#* .*.swp .DS_Store .settings target target/* .idea .idea/* *.iml
+*.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo __pycache__ *.rej *~ #*# .#* .*.swp .DS_Store [Tt]humbs.db logs target .idea *.iml RemoteSystemsTempFiles .recommenders .metadata Servers .settings .externalToolBuilders *.iml *.log dist ~$*.* .gitignore overlays node_modules .vscode
 
 ## idea hot key
 
