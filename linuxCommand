@@ -42,6 +42,8 @@ service ssh start # 启动ssh服务
     [图形输出vmstat](https://blog.csdn.net/sd4015700/article/details/50516856)
 
     对于.log，用notepad++打开，先删除首行，循环查找，正则匹配， (空格)+，替换为逗号，另存为.csv，直接就可用excel打开了
+    excel合并两列，利用Ctrl+E键瞬间完成合并，首先分别复制B4、C4单元格数据到D4 单元格，然后选中D5单元格按Ctrl+E键即可快速完成两列数据合并。
+
    
    
    
