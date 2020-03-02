@@ -34,7 +34,12 @@ service ssh start # 启动ssh服务
    df -hl
    注意文件删除后，若显示磁盘占用还是很高，试着把相关应用进程也停掉，再看磁盘占用情况。
    
-   
+12. vmstat带时间戳输出到文件
+    vmstat -n 5 | awk '{print strftime("[%Y-%m-%d %H:%M:%S]"),$0; fflush(); }' > vmstat_`date +%Y%m%d%H%M%S`.log
+    vmstat相关信息
+    [介绍](https://www.cnblogs.com/ftl1012/p/vmstat.html)
+    [参数介绍](https://blog.csdn.net/zjq001x/article/details/83752113)
+    [图形输出vmstat](https://blog.csdn.net/sd4015700/article/details/50516856)
    
    
    
