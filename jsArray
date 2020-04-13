@@ -4,6 +4,12 @@
     arr.splice(arr.findIndex(item => item.id === 8), 1)  
 
 2. arr.slice(0)  copy
+使用 slice() 截取数组
+slice() 方法与 splice() 方法功能相近，但是它仅能够截取数组中指定区段的元素，并返回这个子数组。该方法包含两个参数，分别指定截取子数组的起始和结束位置的下标。
+var a = [1,2,3,4,5];  //定义数组
+var b = a.slice(2,5);  //截取第三个元素到第六个元素前的所有元素
+console.log(b);  //返回[3,4,5]
+
 
 3. isNaN() 函数用于检查其参数是否是非数字值。true:非数字
 
