@@ -61,3 +61,20 @@ alter table ACT_EVT_LOG allocate extent; --给当前用户下的表分配空间
 
   alter system kill session '99,3783';
 
+9 聚合函数
+select LISTAGG (NAME,'-') within group(order by r1 DESC) REGION_NAME from t1
+
+10 父子结构
+select TR.NAME, ROWNUM RN from TREGION TR
+CONNECT BY PRIOR TR.P_CODE = TR.CODE
+START WITH TR.CODE = '440303'
+
+PRIOR TR.P_CODE = TR.CODE
+or
+PRIOR TR.CODE = TR.P_CODE
+决定了从上到下or从下到上查找
+
+11 开窗函数
+select A.O_CODE, A.O_GRADE, A.O_OUTLOOK, RANK() OVER(PARTITION BY A.O_CODE ORDER BY A.BASEDATE DESC) RN from TCORP_GRADE  A WHERE O_CODE = 'CP20170223112223450' 
+
+
