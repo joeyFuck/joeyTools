@@ -75,6 +75,15 @@ PRIOR TR.CODE = TR.P_CODE
 决定了从上到下or从下到上查找
 
 11 开窗函数
-select A.O_CODE, A.O_GRADE, A.O_OUTLOOK, RANK() OVER(PARTITION BY A.O_CODE ORDER BY A.BASEDATE DESC) RN from TCORP_GRADE  A WHERE O_CODE = 'CP20170223112223450' 
+select A.O_CODE, A.O_GRADE, A.O_OUTLOOK, RANK() OVER(PARTITION BY A.O_CODE ORDER BY A.BASEDATE DESC) RN 
+from TCORP_GRADE  A WHERE O_CODE = 'CP20170223112223450' 
+
+
+12 闪回 flashback 针对某张表还原到某个时间节点
+alter table tpool_bond_ext enable row movement;
+
+flashback table tpool_bond_ext to timestamp 
+to_timestamp('2015-06-04 17:00:00','yyyy-mm-dd HH24:MI:SS');
+
 
 
