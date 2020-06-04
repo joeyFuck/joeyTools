@@ -19,7 +19,7 @@ ctrl+shift  +/-:整页展开或折叠代码块 去掉shift就是单个方法的�
 
 ctrl+shift+r:全局替换/搜索
 
-ctrl+shift+f:全局搜索(包括内容) 常用
+ctrl+shift+f:全局搜索(包括内容) 常用   包括查找maven包内的action 范围限制为[Scope] + [All Place]
 
 double shift(全局搜索，搜索文件名，路由相关) 最常用
 
