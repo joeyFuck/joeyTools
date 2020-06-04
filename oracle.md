@@ -61,8 +61,44 @@ alter table ACT_EVT_LOG allocate extent; --给当前用户下的表分配空间
 
   alter system kill session '99,3783';
 
-9 聚合函数
-select LISTAGG (NAME,'-') within group(order by r1 DESC) REGION_NAME from t1
+9 聚合函数 -- LISTAGG
+ 聚合
+select LISTAGG (NAME,'-') REGION_NAME from T1 t
+
+ 聚合+排序
+select LISTAGG (NAME,'-') within group(order by r1 DESC) REGION_NAME from T1 t
+ 
+ 聚合+排序+其他分组列
+select t.code, LISTAGG (NAME,'-') within group(order by r1 DESC) REGION_NAME from T1 t group by t.code
+
+ 聚合+排序+任意列(比直接在多表关联查询中使用聚合子查询要快的多)
+select t.code, t.c1,t.c21,m.c_name, 
+LISTAGG (NAME,'-') within group(order by r1 DESC) over(PARTITION BY t.code) REGION_NAME 
+from T1 t
+left join T2 m ON m.code = t.code
+ 
+ 直接在多表关联查询中使用聚合子查询 (较慢)
+SELECT distinct t.f_code doc_id,T.*,B.D_NAME,U.EM_USERNAME,
+    (
+         select LISTAGG (O_NAME,',') from tcrt_document_obj_map where F_CODE = t.F_CODE
+    ) OBJ_NAME,
+              
+FROM TCRT_DOCUMENT T
+LEFT JOIN TXF_DIR_MNODE B ON T.D_ID=B.D_ID
+LEFT JOIN TSYS_USER U ON U.EM_ID = T.F_UPLOADER
+left join tcrt_document_obj_map m on m.f_code = t.f_code
+
+多表关联查询中使用聚合+分析函数(较快)
+SELECT distinct t.f_code doc_id,T.*,B.D_NAME,U.EM_USERNAME, 
+
+   listagg (distinct m.O_NAME, ',') WITHIN GROUP (ORDER BY m.O_NAME)  over(PARTITION BY m.f_code) OBJ_NAME
+ 
+FROM TCRT_DOCUMENT T
+LEFT JOIN TXF_DIR_MNODE B ON T.D_ID=B.D_ID
+LEFT JOIN TSYS_USER U ON U.EM_ID = T.F_UPLOADER
+left join tcrt_document_obj_map m on m.f_code = t.f_code
+
+
 
 10 父子结构
 select TR.NAME, ROWNUM RN from TREGION TR
@@ -77,7 +113,6 @@ PRIOR TR.CODE = TR.P_CODE
 11 开窗函数
 select A.O_CODE, A.O_GRADE, A.O_OUTLOOK, RANK() OVER(PARTITION BY A.O_CODE ORDER BY A.BASEDATE DESC) RN 
 from TCORP_GRADE  A WHERE O_CODE = 'CP20170223112223450' 
-
 
 12 闪回 flashback 针对某张表还原到某个时间节点
 alter table tpool_bond_ext enable row movement;
