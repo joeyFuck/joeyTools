@@ -5,10 +5,15 @@
 3 create user xcrsdb_engine_user1 identified by xcrsdb_engine_user1 default tablespace flowable_engine; --在当前实例下建用户
 
 删除用户（即删库）
+
 select username,sid,serial#,t.* from v$session t where username='PF_XCRMS' ;--
+
 alter system kill session '9,27190' ;
+
 alter user PF_XCRMS account UNLOCK
+
 alter session set "_ORACLE_SCRIPT"=true; 
+
 --drop user PF_XCRMS CASCADE
 
 4 导出导入某个用户下的所有表
@@ -62,13 +67,17 @@ alter table ACT_EVT_LOG allocate extent; --给当前用户下的表分配空间
   alter system kill session '99,3783';
 
 9 聚合函数 -- LISTAGG
+
  聚合
-select LISTAGG (NAME,'-') REGION_NAME from T1 t
+ 
+select LISTAGG (NAME,'-') REGION_NAME from T1 t (不加within group在oracle19中报错，11g中可以)
 
  聚合+排序
+ 
 select LISTAGG (NAME,'-') within group(order by r1 DESC) REGION_NAME from T1 t
  
  聚合+排序+其他分组列
+ 
 select t.code, LISTAGG (NAME,'-') within group(order by r1 DESC) REGION_NAME from T1 t group by t.code
 
  聚合+排序+任意列(比直接在多表关联查询中使用聚合子查询要快的多)
@@ -91,7 +100,7 @@ left join tcrt_document_obj_map m on m.f_code = t.f_code
 多表关联查询中使用聚合+分析函数(较快)
 SELECT distinct t.f_code doc_id,T.*,B.D_NAME,U.EM_USERNAME, 
 
-   listagg (distinct m.O_NAME, ',') WITHIN GROUP (ORDER BY m.O_NAME)  over(PARTITION BY m.f_code) OBJ_NAME
+   listagg (m.O_NAME, ',') WITHIN GROUP (ORDER BY m.O_NAME)  over(PARTITION BY m.f_code) OBJ_NAME
  
 FROM TCRT_DOCUMENT T
 LEFT JOIN TXF_DIR_MNODE B ON T.D_ID=B.D_ID
