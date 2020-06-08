@@ -81,12 +81,14 @@ select LISTAGG (NAME,'-') within group(order by r1 DESC) REGION_NAME from T1 t
 select t.code, LISTAGG (NAME,'-') within group(order by r1 DESC) REGION_NAME from T1 t group by t.code
 
  聚合+排序+任意列(比直接在多表关联查询中使用聚合子查询要快的多)
+ 
 select t.code, t.c1,t.c21,m.c_name, 
 LISTAGG (NAME,'-') within group(order by r1 DESC) over(PARTITION BY t.code) REGION_NAME 
 from T1 t
 left join T2 m ON m.code = t.code
  
  直接在多表关联查询中使用聚合子查询 (较慢)
+ 
 SELECT distinct t.f_code doc_id,T.*,B.D_NAME,U.EM_USERNAME,
     (
          select LISTAGG (O_NAME,',') from tcrt_document_obj_map where F_CODE = t.F_CODE
@@ -98,6 +100,7 @@ LEFT JOIN TSYS_USER U ON U.EM_ID = T.F_UPLOADER
 left join tcrt_document_obj_map m on m.f_code = t.f_code
 
 多表关联查询中使用聚合+分析函数(较快)
+
 SELECT distinct t.f_code doc_id,T.*,B.D_NAME,U.EM_USERNAME, 
 
    listagg (m.O_NAME, ',') WITHIN GROUP (ORDER BY m.O_NAME)  over(PARTITION BY m.f_code) OBJ_NAME
@@ -110,6 +113,7 @@ left join tcrt_document_obj_map m on m.f_code = t.f_code
 
 
 10 父子结构
+
 select TR.NAME, ROWNUM RN from TREGION TR
 CONNECT BY PRIOR TR.P_CODE = TR.CODE
 START WITH TR.CODE = '440303'
@@ -117,13 +121,16 @@ START WITH TR.CODE = '440303'
 PRIOR TR.P_CODE = TR.CODE
 or
 PRIOR TR.CODE = TR.P_CODE
+
 决定了从上到下or从下到上查找
 
 11 开窗函数
+
 select A.O_CODE, A.O_GRADE, A.O_OUTLOOK, RANK() OVER(PARTITION BY A.O_CODE ORDER BY A.BASEDATE DESC) RN 
 from TCORP_GRADE  A WHERE O_CODE = 'CP20170223112223450' 
 
 12 闪回 flashback 针对某张表还原到某个时间节点
+
 alter table tpool_bond_ext enable row movement;
 
 flashback table tpool_bond_ext to timestamp 
