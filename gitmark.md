@@ -1,5 +1,6 @@
 最好用gitbash，cmd对应grep这种命令不支持
 
+
 > 1、Updates were rejected because the tip of your current branch is behind
 git bash 强制提交 git push -u origin master -f
 
@@ -26,6 +27,11 @@ no changes added to commit (use "git add" and/or "git commit -a")
 恢复
 ```
 git update-index --no-assume-unchanged public/static/config/env.js
+```
+
+查看所有assume-unchanged的文件
+```
+git ls-files -v | grep '^h\ '
 ```
 
 > 3、分支合并
