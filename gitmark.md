@@ -1,7 +1,9 @@
-.1、Updates were rejected because the tip of your current branch is behind
+最好用gitbash，cmd对应grep这种命令不支持
+
+> 1、Updates were rejected because the tip of your current branch is behind
 git bash 强制提交 git push -u origin master -f
 
-.2、忽略某个文件
+> 2、忽略某个文件
 
 忽略后，git status就看不到该文件了
 
@@ -26,7 +28,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 git update-index --no-assume-unchanged public/static/config/env.js
 ```
 
-.3、分支合并
+> 3、分支合并
 ```
 1.先提交一波  为后续切分支准备
 
@@ -52,7 +54,7 @@ git merge xxx2
 
 完事
 ```
-#示例
+# 示例
 
 ## D:\javaProduct\信用定价\vue-hengtai-admin>git status
 On branch master
