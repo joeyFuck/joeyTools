@@ -1,6 +1,34 @@
 .1、Updates were rejected because the tip of your current branch is behind
 git bash 强制提交 git push -u origin master -f
 
+.2、分支合并
+```
+1.先提交一波  为后续切分支准备
+
+(xxx1为自己的分支  xxx2为想要拉取的分支)
+
+git add .
+
+git commit -m 'yyy'
+
+git push origin xxx1
+
+2.然后git切换到你所要拉取的分支xxx2  拉取该分支代码
+
+git checkout xxx2
+
+git pull origin xxx2 或者git fetch origin xxx2
+
+3.切回自己的分支
+
+git checkout xxx1
+
+git merge xxx2
+
+完事
+```
+#示例
+
 ## D:\javaProduct\信用定价\vue-hengtai-admin>git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
