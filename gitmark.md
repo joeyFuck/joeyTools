@@ -1,4 +1,4 @@
-1、Updates were rejected because the tip of your current branch is behind
+.1、Updates were rejected because the tip of your current branch is behind
 git bash 强制提交 git push -u origin master -f
 
 ## D:\javaProduct\信用定价\vue-hengtai-admin>git status
