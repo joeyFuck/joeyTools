@@ -1,7 +1,32 @@
 .1、Updates were rejected because the tip of your current branch is behind
 git bash 强制提交 git push -u origin master -f
 
-.2、分支合并
+.2、忽略某个文件
+
+忽略后，git status就看不到该文件了
+
+```
+D:\javaProduct\信用定价\vue-hengtai-admin>git update-index --assume-unchanged public/static/config/env.js
+D:\javaProduct\信用定价\vue-hengtai-admin>git status
+On branch develop
+Your branch is up-to-date with 'origin/develop'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   src/api/menu.js
+        modified:   src/settings.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+```
+
+恢复
+```
+git update-index --no-assume-unchanged public/static/config/env.js
+```
+
+.3、分支合并
 ```
 1.先提交一波  为后续切分支准备
 
