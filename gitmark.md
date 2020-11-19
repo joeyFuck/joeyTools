@@ -189,3 +189,10 @@ To http://gitlab.xquant-cdb.com/design/vue-hengtai-admin.git
 
 https://blog.csdn.net/qq_42602515/article/details/107232894
 
+> 5、clone时指定分支
+
+git clone -b branchA http://admin@192.168.1.101:7070/r/virtualbox_all_versions.git
+
+> 6、windows下clone时，目录太长
+
+git config --system core.longpaths true
