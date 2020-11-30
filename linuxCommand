@@ -9,6 +9,8 @@ adduser phpq //新建phpq用户
 
 4. 为用户分配文件夹权限
 chown ‐R phpq ./abc
+chmod 777 /home # 分配所有权限给所有人
+
 
 5. 更新依赖
 apt-get update (更新依赖)
@@ -45,7 +47,30 @@ service ssh start # 启动ssh服务
     excel合并两列(这里是前两列合并成时间戳)，利用Ctrl+E键瞬间完成合并，首先分别复制B4、C4单元格数据到D4 单元格，然后选中D5单元格按Ctrl+E键即可快速完成两列数据合并。
     选中时间戳列及需要分析的列，拷贝到新的sheet，选中所有列，生成折线图。
     
+13. ll /home/123.conf
+    显示对应文件的相关信息 包括读取权限等
 
+14. pwd 
+    展示当前目录
+
+15. vi /home/123.conf
+    vim编辑该文件
+    按i:进入编辑状态
+    按esc:进入命令输入状态 
+      :wq 保存退出
+      :q退出
+      :wq! :q! 强制退出
+      :/aaa 查找aaa 全字匹配 往下查找
+      :?aaa 查找aaa 往上查找
+      :/a.a 通配符查找 .匹配单个字符
+      :/a*a 通配符查找 *匹配多个字符
+    
+ 16. sqlplus /nolog
+      oracle 用sqlplus登录不输出日志
+      sqlplus xcrms/credit123 用户账号登录
+      
+      
+      
    
    
    
