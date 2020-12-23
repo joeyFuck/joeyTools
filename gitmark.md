@@ -189,6 +189,29 @@ To http://gitlab.xquant-cdb.com/design/vue-hengtai-admin.git
 
 https://blog.csdn.net/qq_42602515/article/details/107232894
 
+current branch zhongtai-feature-dev1223
+git add .
+git commit -m "message"
+git pull origin zhongtai-dev
+--vi 
+--confict
+  git add
+  git commit -m "fix conflict"
+git push origin zhongtai-feature-dev1223:zhongtai-feature-devQj
+
+再导gitlab zhongtai-feature-dev1223 =》 request merge into zhongtai-dev
+
+merge pass
+
+
+=====
+git checkout zhongtai-dev
+git pull origin zhongtai-dev
+git checkout -b zhongtai-feature-dev1224
+
+...
+
+
 > 5、clone时指定分支
 
 git clone -b branchA http://admin@192.168.1.101:7070/r/virtualbox_all_versions.git
