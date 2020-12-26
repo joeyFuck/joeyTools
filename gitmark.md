@@ -219,3 +219,27 @@ git clone -b branchA http://admin@192.168.1.101:7070/r/virtualbox_all_versions.g
 > 6、windows下clone时，目录太长
 
 git config --system core.longpaths true
+
+> 7、git 查看commit
+
+git log
+
+git show
+
+    首先，需要通过git log打印所有commit hashID，之后的git show都是基于commit hashID输出的。
+
+1.查看最新的commit
+
+git show
+
+2.查看指定commit hashID的所有修改：
+
+git show commitId
+
+> 8、查看分支
+
+git branch --all
+删除分支
+git branch -D <branchName>
+
+
