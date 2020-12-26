@@ -189,6 +189,7 @@ To http://gitlab.xquant-cdb.com/design/vue-hengtai-admin.git
 
 https://blog.csdn.net/qq_42602515/article/details/107232894
 
+```
 current branch zhongtai-feature-dev1223
 git add .
 git commit -m "message"
@@ -210,7 +211,7 @@ git pull origin zhongtai-dev
 git checkout -b zhongtai-feature-dev1224
 
 ...
-
+```
 
 > 5、clone时指定分支
 
