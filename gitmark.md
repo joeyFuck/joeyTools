@@ -243,4 +243,13 @@ git branch --all
 删除分支
 git branch -D <branchName>
 
+> 9、git从指定的commit创建分支
+
+```
+git checkout -b justin a9c146a09505837ec03b
+This will create the new branch and check it out.
+
+git branch justin a9c146a09505837ec03b
+This creates the branch without checking it out.
+```
 
