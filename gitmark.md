@@ -253,3 +253,12 @@ git branch justin a9c146a09505837ec03b
 This creates the branch without checking it out.
 ```
 
+> 10、放弃本地所有修改
+
+```
+git checkout . #本地所有修改内的。没有的提交的，都返回到原来的状态
+
+git stash #把所有没有提交的修容改暂存到stash里面。可用git stash pop回复。
+git reset --hard HASH #返回到某个节点，不保留修改。
+git reset --soft HASH #返回到某个节点。保留修改
+```
