@@ -245,6 +245,8 @@ git branch -D <branchName>
 
 > 9、git从指定的commit创建分支
 
+先clone project对应分支
+
 ```
 git checkout -b justin a9c146a09505837ec03b
 This will create the new branch and check it out.
