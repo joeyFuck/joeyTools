@@ -69,6 +69,10 @@ service ssh start # 启动ssh服务
       oracle 用sqlplus登录不输出日志
       sqlplus xcrms/credit123 用户账号登录
       
+ 17. 解压
+   .tar.gz 和 .tgz
+   解压：tar zxvf FileName.tar.gz
+   压缩：tar zcvf FileName.tar.gz DirName
       
       
    
