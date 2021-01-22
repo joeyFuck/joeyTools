@@ -215,7 +215,7 @@ git checkout -b zhongtai-feature-dev1224
 
 > 5、clone时指定分支
 
-git clone -b branchA http://admin@192.168.1.101:7070/r/virtualbox_all_versions.git
+git clone -b branchA http://admin@192.168.1.101:7070/r/virtualbox_all_versions.git  文件夹名（optional）
 
 > 6、windows下clone时，目录太长
 
@@ -266,3 +266,8 @@ git reset --soft HASH #返回到某个节点。保留修改
 
 对于新增的文件，也舍弃。只需把文件夹都删了，再git checkout .
 ```
+
+
+
+
+
