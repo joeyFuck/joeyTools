@@ -77,8 +77,10 @@ service ssh start # 启动ssh服务
  18. 删除文件
  rm -rf 文件名
    
-   
-   
+ 19. scp
+ 服务器间传文件
+ scp -r /home/abc.txt  root@1.1.1.1:/home/
+ 回车后输入密码  
    
    
    
