@@ -82,8 +82,10 @@ service ssh start # 启动ssh服务
  scp -r /home/abc.txt  root@1.1.1.1:/home/
  回车后输入密码  
    
-   
-   
+  
+ 20. 看硬盘情况
+ 
+ df -h
     
     
  
