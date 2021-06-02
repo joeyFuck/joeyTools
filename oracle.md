@@ -39,7 +39,9 @@ commit;
 
 6 导出dmp时，有些空表未导出（手动分配表空间）
 
-select 'analyze table '||table_name||' compute statistics;' from user_tables;
+--select 'analyze table '||table_name||' compute statistics;' from user_tables;
+--多个表空间时，需指定表空间
+select 'analyze table '||table_name||' compute statistics;' from user_tables where TABLESPACE_NAME = 'CREDIT';
 
 --复制生成的所有语句一起执行
 
