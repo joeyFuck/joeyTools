@@ -152,6 +152,10 @@ git reset --soft HASH #返回到某个节点。保留修改
  再切换到该分支上
  git checkout dev 
 ```
-
+> 12、git log
+  
+  git log --pretty=oneline # 只看commit message
+  
+  
 
 
