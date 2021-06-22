@@ -155,7 +155,13 @@ git reset --soft HASH #返回到某个节点。保留修改
 > 12、git log
   
   git log --pretty=oneline # 只看commit message
+
+> 13、git 恢复到指定的commit hash
   
+  https://www.cnblogs.com/human/p/5128482.html
+  
+  $ git reset --hard resetVersionHash //将当前branch的HEAD指针指向commit hash
+  $ git push -f origin currentBranch  //把当前分支强制提交到远程
   
 
 
