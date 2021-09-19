@@ -164,4 +164,8 @@ git reset --soft HASH #返回到某个节点。保留修改
   $ git push -f origin currentBranch  //把当前分支强制提交到远程
   
 
-
+> 14、git config --system core.longpaths true
+  
+  将git的配置文件中的长文件名修改为true
+  
+  查看修改结果: git config core.longpaths
