@@ -61,6 +61,17 @@ Ctrl + alt +v:自动生成方法返回值
 
 alt+enter:自动引用package
 
+注释： 先CTRL+K，然后CTRL+C
+
+取消注释： 先CTRL+K，然后CTRL+U
+
+代码自动对齐：
+1, ctrl+a
+
+2, ctrl+k
+
+3, ctrl+f
+
 按idea函数左边工具栏上小绿点，可以切换接口跟实现界面
 
 ## 利用K8S技术栈(+Docker)打造个人私有云
