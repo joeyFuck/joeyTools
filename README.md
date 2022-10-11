@@ -57,7 +57,7 @@ Ctrl+H:全局查找文件内容
 
 Ctrl+G:转到方法全部引用
 
-Ctrl + alt +v:自动生成方法返回值
+选中方法名alt +enter:自动生成方法返回值
 
 alt+enter:自动引用package
 
@@ -65,12 +65,9 @@ alt+enter:自动引用package
 
 取消注释： 先CTRL+K，然后CTRL+U
 
-代码自动对齐：
-1, ctrl+a
+代码自动对齐：全选再ctrl+k+f
 
-2, ctrl+k
-
-3, ctrl+f
+ 
 
 小写快捷键：ctrl + u
 
